@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Move on click</title>
+    <style>
+
+        div.square {
+               height: 100px;
+                    width: 100px;
+                    background-color: red;
+                }
+
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        input[type="checkbox"]:checked + label {
+            /*font-family: 'Avenir Next';*/
+        }
+
+        div.square {
+            transition: transform 500ms ease;
+        }
+
+        input[type="checkbox"]:checked + label + div.square {
+            transform: translateX(500px);
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <input type="checkbox" id="inp1">
+    <label for="inp1">UI Dev</label>
+    <div class="square">
+
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+
+</body>
+</html>

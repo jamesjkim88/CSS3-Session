@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3</title>
+    <style>
+
+        body {
+            font-family: 'Avenir Next';
+        }
+
+        li > :nth-child(2) { /* first-child, last-child, 2n 3n + 1, 2n + 2 */
+            background-color: gray;
+        }
+
+        section > :nth-of-type(2) {
+            font-weight: 600;
+        }
+
+        :empty {
+            background-color: red;
+        }
+
+        #kelly {
+            transition: background-color 500ms ease 250ms;
+        }
+
+        #kelly:target {
+            background-color: green;
+            color: white;
+
+        }
+
+
+
+        .brendan {
+            background-color: yellow;
+        }
+
+        .brendan + li {
+            background-color: yellow;
+        }
+
+        .brendan ~ li {
+            font-weight: 800;
+        }
+
+        .link ~ * {
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <div>
+        <a class="link" href="#kelly">Go to Kelly</a>
+        <br>
+        <div>div element</div>
+        <span>span element</span>
+        <section>
+            section element
+        </section>
+
+    </div>
+    <ul>
+        <li>
+            <span>First</span>
+            <span>Second</span>
+            <span>
+                <a href="#">Google</a>
+                <a href="#">Apple</a>
+                <a href="#">Facebook</a>
+            </span>
+        </li>
+        <li>Kelly</li>
+        <li class="brendan">Brendan</li>
+        <li>Sonal</li>
+        <li>Rohit</li>
+        <li></li>
+        <li></li>
+        <li>James</li>
+    </ul>
+
+    <section>
+        <div>First div</div>
+        <p>First Paragraph</p>
+        <div>Second Div</div>
+        <p>Second Paragraph</p>
+        <ul>
+            <li>first li</li>
+            <li>second li</li>
+        </ul>
+        <ul>
+            <li>first li</li>
+            <li>second li</li>
+        </ul>
+        <div>
+            <span>
+
+            </span>
+            <span>sdf</span>
+        </div>
+    </section>
+
+    <ul>
+        <li>
+            <span>First</span>
+            <span>Second</span>
+            <span>
+                <a href="#">Google</a>
+                <a href="#">Apple</a>
+                <a href="#">Facebook</a>
+            </span>
+        </li>
+        <li>Kelly</li>
+        <li>Brendan</li>
+        <li>Sonal</li>
+        <li>Rohit</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul>
+        <li>
+            <span>First</span>
+            <span>Second</span>
+            <span>
+                <a href="#">Google</a>
+                <a href="#">Apple</a>
+                <a href="#">Facebook</a>
+            </span>
+        </li>
+        <li>Kelly</li>
+        <li>Brendan</li>
+        <li>Sonal</li>
+        <li>Rohit</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul>
+        <li>
+            <span>First</span>
+            <span>Second</span>
+            <span>
+                <a href="#">Google</a>
+                <a href="#">Apple</a>
+                <a href="#">Facebook</a>
+            </span>
+        </li>
+        <li>Kelly</li>
+        <li>Brendan</li>
+        <li>Sonal</li>
+        <li>Rohit</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul>
+        <li>
+            <span>First</span>
+            <span>Second</span>
+            <span>
+                <a href="#">Google</a>
+                <a href="#">Apple</a>
+                <a href="#">Facebook</a>
+            </span>
+        </li>
+        <li id="kelly">Kelly</li>
+        <li>Brendan</li>
+        <li>Sonal</li>
+        <li>Rohit</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <ul>
+        <li>
+            <span>First</span>
+            <span>Second</span>
+            <span>
+                <a href="#">Google</a>
+                <a href="#">Apple</a>
+                <a href="#">Facebook</a>
+            </span>
+        </li>
+        <li>Kelly</li>
+        <li>Brendan</li>
+        <li>Sonal</li>
+        <li>Rohit</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul><ul>
+        <li>
+            <span>First</span>
+            <span>Second</span>
+            <span>
+                <a href="#">Google</a>
+                <a href="#">Apple</a>
+                <a href="#">Facebook</a>
+            </span>
+        </li>
+        <li>Kelly</li>
+        <li>Brendan</li>
+        <li>Sonal</li>
+        <li>Rohit</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul><ul>
+        <li>
+            <span>First</span>
+            <span>Second</span>
+            <span>
+                <a href="#">Google</a>
+                <a href="#">Apple</a>
+                <a href="#">Facebook</a>
+            </span>
+        </li>
+        <li>Kelly</li>
+        <li>Brendan</li>
+        <li>Sonal</li>
+        <li>Rohit</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul><ul>
+        <li>
+            <span>First</span>
+            <span>Second</span>
+            <span>
+                <a href="#">Google</a>
+                <a href="#">Apple</a>
+                <a href="#">Facebook</a>
+            </span>
+        </li>
+        <li>Kelly</li>
+        <li>Brendan</li>
+        <li>Sonal</li>
+        <li>Rohit</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul><ul>
+        <li>
+            <span>First</span>
+            <span>Second</span>
+            <span>
+                <a href="#">Google</a>
+                <a href="#">Apple</a>
+                <a href="#">Facebook</a>
+            </span>
+        </li>
+        <li>Kelly</li>
+        <li>Brendan</li>
+        <li>Sonal</li>
+        <li>Rohit</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul><ul>
+        <li>
+            <span>First</span>
+            <span>Second</span>
+            <span>
+                <a href="#">Google</a>
+                <a href="#">Apple</a>
+                <a href="#">Facebook</a>
+            </span>
+        </li>
+        <li>Kelly</li>
+        <li>Brendan</li>
+        <li>Sonal</li>
+        <li>Rohit</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul><ul>
+        <li>
+            <span>First</span>
+            <span>Second</span>
+            <span>
+                <a href="#">Google</a>
+                <a href="#">Apple</a>
+                <a href="#">Facebook</a>
+            </span>
+        </li>
+        <li>Kelly</li>
+        <li>Brendan</li>
+        <li>Sonal</li>
+        <li>Rohit</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul><ul>
+        <li>
+            <span>First</span>
+            <span>Second</span>
+            <span>
+                <a href="#">Google</a>
+                <a href="#">Apple</a>
+                <a href="#">Facebook</a>
+            </span>
+        </li>
+        <li>Kelly</li>
+        <li>Brendan</li>
+        <li>Sonal</li>
+        <li>Rohit</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul><ul>
+        <li>
+            <span>First</span>
+            <span>Second</span>
+            <span>
+                <a href="#">Google</a>
+                <a href="#">Apple</a>
+                <a href="#">Facebook</a>
+            </span>
+        </li>
+        <li>Kelly</li>
+        <li>Brendan</li>
+        <li>Sonal</li>
+        <li>Rohit</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 600px;
+        }
+        div.square {
+            height: 300px;
+            width: 200px;
+            background-color: red;
+            /*transform: translateY(50px);*/
+            transition: all 500ms ease;
+            transform-origin: 0% 50%;
+
+            padding: 1em;
+
+            transform-style: preserve-3d;
+        }
+
+        /*  */
+
+        div.square:hover {
+            /*transform: translateY(20px) translateX(20px);*/
+            transform: rotateY(45deg) /*scaleX(2) scaleY(2)*/;
+        }
+
+        div.flap {
+            height: 150px;
+            background-color: rgba(0, 0, 255, 0.5);
+            transition: all 500ms ease 500ms;
+            transform-origin: 50% 0%;
+        }
+
+        div.square:hover > div.flap {
+            background-color: darkred;
+            transform: rotateX(45deg) translateZ(50px);
+        }
+
+
+        div.square {
+            box-shadow: 20px 100px 15px 5px gray;
+        }
+
+        div.square:hover {
+
+            box-shadow: 100px 100px 20px 5px gray;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="square">
+        <div class="flap"></div>
+    </div>
+</body>
+</html>

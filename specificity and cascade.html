@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Specificity and Cascade</title>
+    <style>
+
+        /**
+            space --> descendant selector
+
+            SPECIFICITY: 0 0 0 0 l --> R
+            IGNORE combinators --> space, +, >, ,
+
+            0 0 2 1  - more specific
+            0 0 1 19000
+
+            inline / id / class or attribute / element
+
+        */
+
+        div#kelly { /* 0 1 0 1 */
+            font-family: 'Courier New';
+        }
+
+        div.james { /* 0 0 1 1 */
+            font-family: 'Avenir Next' !important;
+        }
+
+        section#container div { /* 0 1 0 2 */
+            font-family: 'Helvetica Neue';
+        }
+
+        section.base div.james { /* 0 0 2 2 */
+            font-family: 'Helvetica';
+        }
+
+        section.base #kelly { /* 0 1 1 1 */
+            font-family: 'Arial';
+        }
+
+        section#container > .james {/* 0 1 1 1 */
+            font-family: 'sans-serif';
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <section style="color: red;" id="container" class="base">
+        <div id="kelly" class="james">
+            Some data
+        </div>
+    </section>
+
+</body>
+</html>

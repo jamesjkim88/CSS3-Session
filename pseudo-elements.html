@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo-elements</title>
+    <style>
+
+        body {
+
+            font-family: 'Avenir Next';
+        }
+
+        div {
+
+            padding: 1em;
+            background-color: #eee;
+
+        }
+
+        div.flt {
+            float: left;
+            width: 200px;
+            opacity: 0.5;
+            background-color: red;
+        }
+
+
+        div::-moz-selection {
+            background-color: #aaa;
+        }
+        div::selection {
+            background-color: #aaa;
+        }
+
+        ul {
+            list-style-type: none;
+            border: 1px solid red;
+            /*float:left;*/
+        }
+
+        ul::after {
+            display: block;
+
+        }
+
+        ul > li {
+            float: left;
+            background-color: red;
+            color: white;
+            margin: 1em;
+            line-height: 100px;
+            width: 100px;
+            text-align: center;
+        }
+
+
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+
+        span.pdf::before {
+            content: ''
+        }
+
+        div.flt::first-line {
+            font-weight: 100;
+        }
+
+        div.flt::first-letter {
+            font-size: 10em;
+        }
+
+        div {
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flt">
+        Defined :any-link, :local-link, :scope, :active-drop-target, :valid-drop-target, :invalid-drop-target, :current, :past, :future, :placeholder-shown, :user-error, :blank, :nth-match(), :nth-last-match(), :nth-column(), :nth-last-column(), and :matches().
+        No significant change for pseudo-classes defined in Selectors Level 3 and HTML5 (though semantic meaning not taken over).
+    </div>
+
+    <div style="clear:both;">
+        Defined :any-link, :local-link, :scope, :active-drop-target, :valid-drop-target, :invalid-drop-target, :current, :past, :future, :placeholder-shown, :user-error, :blank, :nth-match(), :nth-last-match(), :nth-column(), :nth-last-column(), and :matches().
+        No significant change for pseudo-classes defined in Selectors Level 3 and HTML5 (though semantic meaning not taken over).
+    </div>
+
+    <ul class="clearfix">
+        <li>James</li>
+        <li>Brendan</li>
+        <li>Kelly</li>
+
+    </ul>
+
+    <div>
+        Defined :any-link, :local-link, :scope, :active-drop-target, :valid-drop-target, :invalid-drop-target, :current, :past, :future, :placeholder-shown, :user-error, :blank, :nth-match(), :nth-last-match(), :nth-column(), :nth-last-column(), and :matches().
+        No significant change for pseudo-classes defined in Selectors Level 3 and HTML5 (though semantic meaning not taken over).
+    </div>
+
+    <span class="pdf">mydata.pdf</span>
+
+</body>
+</html>

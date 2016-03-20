@@ -23,8 +23,10 @@
             border-radius: 50%;
 
             position: absolute;
-            right: 20px;
-            top: 100px;
+            left: 20px;
+            top: 10px;
+
+            transition: top 500ms cubic-bezier(.01,.78,.21,.98) 500ms;
         }
 
         div.container {
@@ -34,17 +36,20 @@
             float: left;
             height: 300px;
             width: 200px;
+
         }
 
-        div.circle.drop {
-
+        div.circle.bounce {
+            top: 290px;
         }
 
     </style>
 </head>
 <body>
 
-<button>Animate</button>
+<div>
+    <button>Animate</button>
+</div>
 
 <div class="container">
     <div class="circle"></div>
@@ -52,8 +57,17 @@
 
 <script type="text/javascript">
 
+    // https://davidwalsh.name/javascript-debounce-function
+
     document.querySelector('button').addEventListener('click', function () {
-        document.querySelector('circle').classList.add('bounce');
+        var circle = document.querySelector('div.circle');
+        if (circle.classList.contains('bounce')) {
+            circle.classList.remove('bounce');
+        } else {
+            circle.classList.add('bounce');
+        }
+
+
     });
 
 
