@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        div.square {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            transition: background-color 500ms ease;
+        }
+
+        div.square:hover {
+            background-color: darkred;
+        }
+
+        div.circle {
+            height: 40px;
+            width: 40px;
+            background-color: darkred;
+            border-radius: 50%;
+
+            position: absolute;
+            right: 20px;
+            top: 100px;
+        }
+
+        div.container {
+            /*position: relative; !* !static *!*/
+            border: 1px solid gray;
+            padding: 1em;
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+
+    
+
+    <div class="container">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+
+
+        <div class="circle"></div>
+
+
+    </div>
+
+
+
+</body>
+</html>
